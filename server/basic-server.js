@@ -5,6 +5,7 @@ var fs = require('fs');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+app.set('view engine', 'html');
 var results = [{username: 'Jono', message: 'Do my bidding!', roomname: 'lobby', objectId: 0 }];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
