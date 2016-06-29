@@ -24,6 +24,7 @@ app.set('views', '../client');
 // special address that always refers to localhost.
 var ip = 'localhost';
 app.use(express.static('../client'));
+console.log(__dirname);
 app.get('/', function(request, response) {
   console.log('a get request was made to the root path');
   response.render('index');
