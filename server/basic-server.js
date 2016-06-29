@@ -25,7 +25,7 @@ var ip = 'localhost';
 app.use(express.static('../client'));
 app.get('/', function(request, response) {
   console.log('a get request was made to the root path');
-  response.sendFile('../client/index.html');
+  response.sendFile('index.html', { root: __dirname });
   response.send();
 });
 
