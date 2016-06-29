@@ -17,14 +17,14 @@ var id = 0;
 // ports are 8080 and 1337.
 var port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
-app.set('views', '../client');
+app.set('views', __dirname + '/client');
 
 // For now, since you're running this server on your local machine,
 // we'll have it listen on the IP address 127.0.0.1, which is a
 // special address that always refers to localhost.
 var ip = 'localhost';
-app.use(express.static('../client'));
-console.log(__dirname);
+app.use(express.static(__dirname +'/client'));
+console.log(__dirname + '/client');
 app.get('/', function(request, response) {
   console.log('a get request was made to the root path');
   response.render('index');
