@@ -3,7 +3,7 @@ var app = {
 
   //TODO: The current 'toggleFriend' function just toggles the class 'friend'
   //to all messages sent by the user
-  server: 'http://chitchatbox.herokuapp.com/classes/messages',
+  server: 'https://chitchatbox.herokuapp.com/classes/messages',
   username: 'anonymous',
   roomname: 'lobby',
   lastMessageId: 0,
